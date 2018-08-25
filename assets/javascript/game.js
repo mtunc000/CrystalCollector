@@ -11,11 +11,7 @@ var start = 0;
 var resetAndStart= function(){ 
     $(".crystals").empty();
 
-    var images= [
-        '',
-        '',
-        '',
-        '']
+
 randomGeneratedNumber = Math.floor(Math.random()*101)+19;
     $(".result").html('randomGeneratedNumber:' + randomGeneratedNumber);
 
@@ -27,11 +23,22 @@ for (i=0; i<4; i++){
 
     var crystal = $("<div>");
     crystal.attr({
-        "class":'crystal',
-        "data-random":crystalValue});
+        "class":'crystal', 
+        "data-random":crystalValue,
+        
+    });
+var crystals = $("<div>");
+    crystals.attr({
+        "class":'crystals',
+        "images":'src[i]'
+    })
 
+        //crystals.css({
+          //  "background-image":"src('" + images[i] +"')",
+           // "background": "cover"
+        //});
    
-    crystal.html(crystalValue);
+    //crystal.html(crystalValue);
     $(".crystals").append(crystal);
     
     
