@@ -7,6 +7,10 @@ var randomGeneratedNumber;
 var crystalValue;
 var start = 0;
 
+let h1 = $("h1");
+   h1.text("this is test");
+   h1.before("<h2>Something</h2>");
+
 // Random number generator between 19 and 120
 var resetAndStart= function(){ 
     $(".crystals").empty();
