@@ -8,12 +8,19 @@ var crystalValue;
 var start = 0;
 
 let h1 = $("h1");
-   h1.text("this is test");
-   h1.before("<h2>Something</h2>");
+//    h1.text("this is test");
+//    h1.before("<h2>Something</h2>");
 
 // Random number generator between 19 and 120
 var resetAndStart= function(){ 
     $(".crystals").empty();
+
+var images=[
+     src="assets/images/crystal0.jpg",
+     src="assets/images/crystal1.jpg",
+     src="assets/images/crystal2.jpg",
+     src="assets/images/crystal3.jpg"
+]
 
 
 randomGeneratedNumber = Math.floor(Math.random()*101)+19;
@@ -29,22 +36,29 @@ for (i=0; i<4; i++){
     crystal.attr({
         "class":'crystal', 
         "data-random":crystalValue,
+        // "data-random":random,
+        // "background-image":"assets/images/crystal[i].jpg",
+        
         
     });
-var crystals = $("<div>");
+var crystals = $("crystals");
     crystals.attr({
         "class":'crystals',
-        "images":'src[i]'
+        // "images":"src[i]",
+        "src":"assets/images/crystal[i].jpg"
+       
+        // "src":'assets/images/crystal[i].jpg',
+        // wait: 1000
     })
 
-        //crystals.css({
-          //  "background-image":"src('" + images[i] +"')",
-           // "background": "cover"
-        //});
+        crystals.css({
+           "background-image":"src"+images[i]+"",
+           "background-size": "cover"
+        });
    
     //crystal.html(crystalValue);
     $(".crystals").append(crystal);
-    
+    // "background-image":src("assets/images/crystal[i].jpg"),
     
 }
 }
