@@ -43,22 +43,24 @@ for (i=0; i<4; i++){
     });
 var crystals = $("crystals");
     crystals.attr({
-        // "class":'crystals',
+        "class":'crystals',
         // "images":"src[i]",
-        "src":"assets/images/crystal[i].jpg"
+        // "src":"assets/images/crystal[i].jpg"
+        
        
         // "src":'assets/images/crystal[i].jpg',
         // wait: 1000
     })
 
-        crystals.css({
-           "background-image":"images[i]",
-           "background-size": "cover"
-        });
+    //     crystals.css({
+    // "background-image":"src(assets/images/crystal[i].jpg)",
+    //     //    "background-image":"images[i]",
+    //        "background-size": "cover"
+    //     });
    
     crystal.html(crystalValue);
     $(".crystals").append(crystal);
-    // "background-image"="src("assets/images/crystal[i].jpg")"
+     //"background-image"="src("assets/images/crystal[i].jpg")"
     
  }
 }
