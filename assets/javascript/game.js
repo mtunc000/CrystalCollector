@@ -43,7 +43,7 @@ for (i=0; i<4; i++){
     });
 var crystals = $("crystals");
     crystals.attr({
-        "class":'crystals',
+        // "class":'crystals',
         // "images":"src[i]",
         "src":"assets/images/crystal[i].jpg"
        
@@ -52,15 +52,15 @@ var crystals = $("crystals");
     })
 
         crystals.css({
-           "background-image":"src"+images[i]+"",
+           "background-image":"images[i]",
            "background-size": "cover"
         });
    
-    //crystal.html(crystalValue);
+    crystal.html(crystalValue);
     $(".crystals").append(crystal);
-    // "background-image":src("assets/images/crystal[i].jpg"),
+    // "background-image"="src("assets/images/crystal[i].jpg")"
     
-}
+ }
 }
 resetAndStart();
 // numbers collected from crystals and added towards the result 
